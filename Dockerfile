@@ -8,3 +8,4 @@ RUN wget https://releases.hashicorp.com/consul-template/0.15.0/consul-template_$
 COPY files/haproxy.json /tmp/haproxy.json
 COPY files/haproxy.ctmpl /tmp/haproxy.ctmpl
 
+CMD ["consul-template", "-config=/tmp/haproxy.json"]
